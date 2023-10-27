@@ -13,6 +13,8 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/app', router);
 app.get('/', (req, res)=>{
     console.log('hello');
@@ -20,6 +22,7 @@ app.get('/', (req, res)=>{
 });
 
 app.post('/', (req, res)=>{
+    console.log(req.body);
     let person = {
         name: 'sahcin',
         age: 24
@@ -47,10 +50,13 @@ app.put('/', (req, res)=>{
 
 
 
-app.post('/validation', (req, res)=>{
+app.post('/validation/:skparams', (req, res)=>{
     // res.send(path.resolve(__dirname, 'index.html'));
     // console.log(req);
-    console.log(req.headers.cookie);
+    console.log('-------------------------------------------------');
+    console.log('body:', req.body);
+    console.log('params:', req.params);
+    console.log('query:', req.query);
     console.log('-------------------------------------------------');
     res.sendFile(path.resolve(__dirname, 'index.html'));
     // res.redirect(200, "http://localhost:7000/getFileSecond/");

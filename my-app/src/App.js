@@ -8,6 +8,8 @@ import ReduxStoreProvider from './reduxExample/ReduxStoreProvider';
 import BubblingAndCapturing from './bubblingAndCapturing/BubblingAndCapturing';
 import LifecycleUseEffect from './lifecycleUsingUseEffect/LifecycleUseEffect';
 import ShowContent from './apiCall/ShowContent';
+import SendDataForm from './apiCall/SendDataForm';
+import StopWatch from './stopwatch/StopWatch';
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -39,8 +41,14 @@ function App() {
       <div>
         <LifecycleUseEffect/>
       </div> */}
-      <div>
+      {/* <div>
         <ShowContent />
+      </div> */}
+      {/* <div>
+        <SendDataForm />
+      </div> */}
+      <div>
+        <StopWatch />
       </div>
     </Provider>
   );
