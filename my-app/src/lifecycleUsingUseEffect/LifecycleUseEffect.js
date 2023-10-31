@@ -26,9 +26,15 @@ export default function LifecycleUseEffect(props){
             console.log('componentWillUnmount');
         }
     })
+
+    const checkUseEffectComeFirstOrRender = () => {
+        console.log('render method');
+        return <h1>Render method</h1>
+    }
     return <div>
         <h1>Lifecycle using useEffect hook</h1>
         <button onClick={e=>setValue1(value1+1)}>Increment value1</button>
         <button onClick={e=>setValue2(value2+1)}>Increment value2</button>
+        {checkUseEffectComeFirstOrRender()}
     </div>
 }
