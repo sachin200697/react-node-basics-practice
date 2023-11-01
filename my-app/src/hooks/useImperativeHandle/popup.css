@@ -1,0 +1,13 @@
+.popup{
+    width: 200px;    
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+.focus-btn:focus {
+    background-color: greenyellow;
+    color: white;
+}

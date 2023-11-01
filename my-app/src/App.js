@@ -19,6 +19,12 @@ import UseReducer from './hooks/UseReducer';
 import UseCallback from './hooks/UseCallback';
 import CustomHookForLocalStorage from './hooks/customHook/CustomHookForLocalStorage';
 import UseLayoutEffect from './hooks/UseLayoutEffect';
+import UseTransition from './hooks/UseTransition';
+import UseDeferredValue from './hooks/UseDeferredValue';
+import UseImperativeHandle from './hooks/useImperativeHandle/UseImperativeHandle';
+import UseDebugValue from './hooks/useDebugValue/UseDebugValue';
+import UseId from './hooks/UseId';
+
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -87,8 +93,26 @@ function App() {
         <CustomHookForLocalStorage />
       </div> */}
 
-      <div>
+      {/* <div>
         <UseLayoutEffect />
+      </div> */}
+      {/* <div>
+        <UseTransition/>
+      </div> */}
+
+      {/* <div>
+        <UseDeferredValue />
+      </div> */}
+
+      {/* <div>
+        <UseImperativeHandle />
+      </div> */}
+
+      {/* <div>
+        <UseDebugValue />
+      </div> */}
+      <div>
+        <UseId />
       </div>
 
     </Provider>
