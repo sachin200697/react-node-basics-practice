@@ -59,9 +59,9 @@ function App() {
       {/* <div>
         <ShowContent />
       </div> */}
-      {/* <div>
+      <div>
         <SendDataForm />
-      </div> */}
+      </div>
       {/* <div>
         <StopWatch />
       </div> */}
