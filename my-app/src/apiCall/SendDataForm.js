@@ -27,8 +27,7 @@ export default function SendDataForm() {
     }
 
     const callAttUserInfo = () => {
-        let url = 'https://api.example.com/data'; // replace with your API endpoint
-        url = 'https://oidc.stage.elogin.att.com/mga/sps/oauth/oauth20/userinfo?';
+        let url = 'https://api.example.com/data'; // replace with your API endpoint        
         let token = '4vUX7vu';
         token = 'abcdef';
 
@@ -41,51 +40,14 @@ export default function SendDataForm() {
             headers
         };
 
-        // fetch(url, requestOptions)
-        // .then(response => response.json())
-        // .then(result => console.log(result))
-        // .catch(error => console.log('error', error));
-
-        // Create a cookie string with the key, value, and attributes
-        // const cookieString = "PD-S-SESSION-ID=1_2_1_ko3pqVMU4jaThBnhuuNhH5Oe2XYDrBt5IMIM+T7taiP2-A2X; Domain=.stage.elogin.att.com; Path=/; Secure; HttpOnly";
- 
-        const cookieString = "PD-S-SESSION-ID=1_2_1_ko3pqVMU4jaThBnhuuNhH5Oe2XYDrBt5IMIM+T7taiP2-A2X; Domain=.stage.elogin.att.com; Path=/; Secure; SameSite=None";
-        // Assign the cookie string to document.cookie
-        document.cookie = cookieString;
-
-
-        // var req = new XMLHttpRequest();
-        // req.open("GET", "filename", true);
-        // req.setRequestHeader("Authorization", "Bearer ME2CG0GAllGQFqG0BZXx");
-        // req.setRequestHeader('Content-Type', 'application/json');
-
-        // req.onreadystatechange = function() {
-        //     if (this.readyState === 4 && this.status === 200) {
-        //        // Typical action to be performed when the document is ready:
-        //        document.getElementById("index.html").innerHTML = req.responseText;
-        //        console.log(req.responseText);
-        //     }
-        // };
         
-        // req.send();
-        
-
         fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 1piSYVIzi1mU17GkQIAK'
+                'Authorization': 'Bearer abcd'
             }
-        })
-
-        // const instance = axios.create({
-        //     baseURL: url,
-        //     headers: {
-        //         Authorization: 'Bearer ME2CG0GAllGQFqG0BZXx'
-        //     }
-        //     });
-
-        // instance.get()
+        })        
         .then(response => response.json())
         .then(result => console.log('sk-data:',result))
         .catch(error => console.log('error', error));
