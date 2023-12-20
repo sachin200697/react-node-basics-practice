@@ -5,7 +5,7 @@ function ReduxConsumer({user, loginActionCreator}){
     console.log(user);
     return <div>
         {user.user}
-        <button onClick={e=>loginActionCreator('sachin')}>Change User</button>
+        <button onClick={e=>loginActionCreator(user.user==='Sachin'?'Prabhat':'Sachin')}>Change User</button>
     </div>
 }
 

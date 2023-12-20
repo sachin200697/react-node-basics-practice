@@ -27,7 +27,8 @@ export default function SendDataForm() {
     }
 
     const callAttUserInfo = () => {
-        let url = 'https://api.example.com/data'; // replace with your API endpoint        
+        let url = 'https://oidc.stage.elogin.att.com/mga/sps/oauth/oauth20/userinfo';
+        // let url = 'https://oidc.idp.elogin.att.com/mga/sps/oauth/oauth20/userinfo';
         let token = '4vUX7vu';
         token = 'abcdef';
 
@@ -45,7 +46,7 @@ export default function SendDataForm() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer abcd'
+                'Authorization': 'Bearer DW953wqGXcyoHFdn6njY'
             }
         })        
         .then(response => response.json())

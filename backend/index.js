@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import router from './person.js';
+import { userRouter } from './src/mysql/userRoute.js';
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -75,6 +76,10 @@ app.get('/getFileSecond', (req, res)=>{
     console.log(req.headers);
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
+
+
+app.use(userRouter);
+
 
 app.listen(process.env.PORT || 7000, ()=>{
     console.log('running');

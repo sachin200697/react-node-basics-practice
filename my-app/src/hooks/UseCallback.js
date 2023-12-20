@@ -15,6 +15,10 @@ const getNumberList = useCallback(() => {
     }, [number]);
 
 
+  // even function declaration also cause re-render if theme changes
+  function getNumberListWithFunctionDeclaration() {
+      return [number, number+1, number+2];
+  }
 
   const style = {
     backgroundColor: theme? 'black': 'white',
@@ -26,6 +30,9 @@ const getNumberList = useCallback(() => {
         <button onClick={()=>setTheme(!theme)}>Toggle Theme</button>
         <div style={style}>
             <NumberList getNumberList={getNumberList} />
+        </div>
+        <div>
+          <NumberListWithFunctionDeclaration getNumberList={getNumberListWithFunctionDeclaration} />
         </div>
     </div>
   );
@@ -47,3 +54,16 @@ function NumberList({getNumberList}) {
   );
 }
 
+
+function NumberListWithFunctionDeclaration({getNumberList}) {
+  const [list, setList] = useState(null);
+  useEffect(()=>{
+    console.log('NumberList with function declaration rendered');
+    setList(getNumberList());
+  }, [getNumberList]);
+  return (
+    <div>
+      {list && list.map((item, index)=><p key={index}>{item}</p>)}
+    </div>
+  );
+}

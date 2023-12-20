@@ -1,7 +1,7 @@
 import actions from "../actions";
 const defaultStore = {user: "Prabhat"};
 
-export const logginReducer = (state=defaultStore, action)=>{
+export const logginReducer = (state=defaultStore, action = null)=>{
     switch(action.type){
         case actions.LOGIN:
             return {

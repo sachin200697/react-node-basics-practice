@@ -24,6 +24,7 @@ import UseDeferredValue from './hooks/UseDeferredValue';
 import UseImperativeHandle from './hooks/useImperativeHandle/UseImperativeHandle';
 import UseDebugValue from './hooks/useDebugValue/UseDebugValue';
 import UseId from './hooks/UseId';
+import Menu from './tabindex/Menu';
 
 
 function App() {
@@ -59,9 +60,9 @@ function App() {
       {/* <div>
         <ShowContent />
       </div> */}
-      <div>
+      {/* <div>
         <SendDataForm />
-      </div>
+      </div> */}
       {/* <div>
         <StopWatch />
       </div> */}
@@ -111,10 +112,10 @@ function App() {
       {/* <div>
         <UseDebugValue />
       </div> */}
-      <div>
+      {/* <div>
         <UseId />
-      </div>
-
+      </div> */}
+      <Menu />
     </Provider>
   );
 }
