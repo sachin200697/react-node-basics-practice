@@ -1,36 +1,40 @@
-import {Provider} from './context/Context';
+import { Provider } from "./context/Context";
 import A from "./components/contextExample/A";
-import Add from './components/HOC/Add';
-import LifeCycle from './lifecycle/LifeCycle';
-import { useState } from 'react';
-import Render from './components/renderExample/Render';
-import ReduxStoreProvider from './reduxExample/ReduxStoreProvider';
-import BubblingAndCapturing from './bubblingAndCapturing/BubblingAndCapturing';
-import LifecycleUseEffect from './lifecycleUsingUseEffect/LifecycleUseEffect';
-import ShowContent from './apiCall/ShowContent';
-import SendDataForm from './apiCall/SendDataForm';
-import StopWatch from './stopwatch/StopWatch';
-import UseState from './hooks/UseState';
-import UseEffect from './hooks/UseEffect';
-import UseMemo from './hooks/UseMemo';
-import UseRef from './hooks/UseRef';
-import CustomHookExample from './hooks/useContext/CustomHookExample';
-import UseReducer from './hooks/UseReducer';
-import UseCallback from './hooks/UseCallback';
-import CustomHookForLocalStorage from './hooks/customHook/CustomHookForLocalStorage';
-import UseLayoutEffect from './hooks/UseLayoutEffect';
-import UseTransition from './hooks/UseTransition';
-import UseDeferredValue from './hooks/UseDeferredValue';
-import UseImperativeHandle from './hooks/useImperativeHandle/UseImperativeHandle';
-import UseDebugValue from './hooks/useDebugValue/UseDebugValue';
-import UseId from './hooks/UseId';
-import Menu from './tabindex/Menu';
+import Add from "./components/HOC/Add";
+import LifeCycle from "./lifecycle/LifeCycle";
+import { useState } from "react";
+import Render from "./components/renderExample/Render";
+import ReduxStoreProvider from "./reduxExample/ReduxStoreProvider";
+import BubblingAndCapturing from "./bubblingAndCapturing/BubblingAndCapturing";
+import LifecycleUseEffect from "./lifecycleUsingUseEffect/LifecycleUseEffect";
+import ShowContent from "./apiCall/ShowContent";
+import SendDataForm from "./apiCall/SendDataForm";
+import StopWatch from "./stopwatch/StopWatch";
+import UseState from "./hooks/UseState";
+import UseEffect from "./hooks/UseEffect";
+import UseMemo from "./hooks/UseMemo";
+import UseRef from "./hooks/UseRef";
+import CustomHookExample from "./hooks/useContext/CustomHookExample";
+import UseReducer from "./hooks/UseReducer";
+import UseCallback from "./hooks/UseCallback";
+import CustomHookForLocalStorage from "./hooks/customHook/CustomHookForLocalStorage";
+import UseLayoutEffect from "./hooks/UseLayoutEffect";
+import UseTransition from "./hooks/UseTransition";
+import UseDeferredValue from "./hooks/UseDeferredValue";
+import UseImperativeHandle from "./hooks/useImperativeHandle/UseImperativeHandle";
+import UseDebugValue from "./hooks/useDebugValue/UseDebugValue";
+import UseId from "./hooks/UseId";
+import Menu from "./tabindex/Menu";
+import HighChart from "./charts/HighChart";
+import Iframe from "./iframe/Iframe";
+import IframeResult from "./iframe/IframeResult";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [toggle, setToggle] = useState(true);
   return (
-    <Provider value='Naman'>
+    <Provider value="Naman">
       {/* <div className="App">
         Start App
         <A/>
@@ -90,9 +94,9 @@ function App() {
         <UseCallback />
       </div> */}
 
-      {/* <div>
+      <div>
         <CustomHookForLocalStorage />
-      </div> */}
+      </div>
 
       {/* <div>
         <UseLayoutEffect />
@@ -115,7 +119,16 @@ function App() {
       {/* <div>
         <UseId />
       </div> */}
-      <Menu />
+      {/* <Menu /> */}
+      {/* <HighChart /> */}
+
+
+      {/* <Iframe /> */}
+      {/* <Router>
+        <Routes>                  
+            <Route path="iframeResult" element={<IframeResult />} />          
+        </Routes>
+      </Router> */}
     </Provider>
   );
 }

@@ -4,6 +4,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import router from './person.js';
 import { userRouter } from './src/mysql/userRoute.js';
+import multiThradingRouter from './src/multi-threading/multithread.js';
+import fourThradingRouter from './src/multi-threading/creating-four-threads-example/four-threads.js';
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -15,6 +17,10 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// for multi-threading
+app.use('/multi-threading/', multiThradingRouter);
+app.use('/multi-threading/', fourThradingRouter);
 
 app.use('/app', router);
 app.get('/', (req, res)=>{
@@ -77,6 +83,9 @@ app.get('/getFileSecond', (req, res)=>{
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
+app.post('/iframe', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, 'index.html'));
+})
 
 app.use(userRouter);
 

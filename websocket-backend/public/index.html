@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chat Application</h1>
+
+    <!-- we can also give src like this: http://localhost:8000/socket.io/socket.io.js
+    because this js script is provided by node while installing socket.io using 
+    npm install socket.io -->
+    
+    <form onsubmit="return sendMessage(event)">
+        <input type="text" placeholder="type your message" id="message"/>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="all-messages"></div>
+
+    <script src="/socket.io/socket.io.js">        
+    </script>
+    <script>
+        // create a connection to backend socket server
+        const socket = io(); 
+        
+        // send message to backend server using socket
+        function sendMessage(e) {
+            e.preventDefault();
+            const messageInput = document.getElementById('message');
+            socket.emit('sk-message', messageInput.value);
+            messageInput.value='';
+        }
+
+        // receiveing message coming from backend server
+        socket.on('broadcast', message => {
+            const messagesDiv = document.getElementById('all-messages');
+            const p = document.createElement('p');
+            p.innerHTML = message;
+            messagesDiv.append(p);
+            console.log(message);
+        });
+
+    </script>
+  </body>
+</html>

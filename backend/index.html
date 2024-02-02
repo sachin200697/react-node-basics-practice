@@ -15,8 +15,15 @@
             fetch('/').then(res=>res.json()).then(data=>console.log(data)).catch(error=>console.log(error));
         }
         // fun();
+        function funIframe() {
+
+        }
     </script>
 
     <button onclick="fun()">Call API</button>
+
+    <form action="http://localhost:3000/iframeResult" method="get" target="_self">
+        <button type="submit">Submit iframe</button>
+    </form>
 </body>
 </html>
