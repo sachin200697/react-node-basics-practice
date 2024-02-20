@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- lodash cdn to inslude lodash library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <button onclick="return fun()">Click</button>
+    <p id="count-click">0</p>
+    <p id="count-press">0</p>
+
+    <script>
+      //polyfil for debounce function
+      function click(time, callback) {
+        let timer = null;
+        const funToExecuteWithTime = () => {
+          callback();
+          timer = null;
+        };
+        return () => {
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(funToExecuteWithTime, time);
+        };
+      }
+
+      let x = 0;
+      let y = 0;
+
+      //making debounce function
+      let debounce = click(3000, () => {
+        y++;
+        document.getElementById('count-press').textContent = y;
+        console.log(`Increase triggered ${y} times`);
+      });
+      //instead of using polyfil function for debounce we can also use lodash
+      // let debounce = _.debounce(callback, time);
+
+      const fun = () => {
+        x++;        
+        console.log(`Button pressed ${x} times`);
+        document.getElementById('count-click').textContent = x;
+
+        debounce();
+      };
+    </script>
+  </body>
+</html>

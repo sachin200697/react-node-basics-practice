@@ -1,0 +1,51 @@
+<!-- focus and blur does not propogate  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #form{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #button{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Focus and blur does not propogate </h1>
+
+    <div id="div">        
+        <form id="form">
+            <button id="button">Click</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('div').addEventListener('click', (e)=>{
+            console.log('div currentTarget', e.currentTarget);
+            console.log('div target',e.target);
+            alert('div clicked');
+        });
+        document.getElementById('form').addEventListener('click', (e)=>{
+            console.log('form currentTarget',e.currentTarget);
+            console.log('form target',e.target);
+            alert('form clicked');
+        });
+        document.getElementById('button').addEventListener('click', (e)=>{
+            console.log('button currentTarget',e.currentTarget);
+            console.log('button target',e.target);
+            alert('button clicked');
+        })
+    </script>
+</body>
+</html>

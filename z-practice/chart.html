@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    #chart{
+        --percentage:10%;
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        margin: 20px;        
+        background-image: conic-gradient(green var(--percentage), lightgreen 0);
+    }
+</style>
+<body>
+    <!-- here 
+        style="--percentage:10%" ->> is not needed but we can define variables like this
+        inside elements
+    -->
+    <input type="range" value="10" id="range" style="--percentage:10%"/>
+    <div id="chart">hello</div>
+
+    <script>
+        let chart = document.getElementById('chart');
+        let range = document.getElementById('range');
+
+        range.addEventListener('input', (e)=>{
+            console.log('hello');
+            chart.style = `--percentage:${e.target.value}%`;
+        });
+    </script>
+</body>
+</html>

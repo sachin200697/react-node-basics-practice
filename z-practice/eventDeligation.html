@@ -1,0 +1,50 @@
+<!-- focus and blur does not propogate  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #div {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+     .product{
+        /* width:  /; */
+        border: 1px solid black;
+        padding: 20px;
+        width: 150px;
+        height: 200px;
+        margin: 20px;
+     }
+    </style>
+  </head>
+  <body>
+    <h1>Focus and blur does not propogate</h1>
+
+    <div id="div">
+      <span class="product">Shirt</span>
+      <span class="product">T-shirt</span>
+      <span class="product">Sharies</span>
+      <span class="product">Geans</span>
+      <span class="product"><b>Jersy</b></span>
+      <span class="product">Coat</span>
+    </div>
+
+    <script>
+      document.getElementById("div").addEventListener("click", (e) => {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'SPAN' || e.target.closest("SPAN")){
+            alert(`Producet purchased is: ${e.target.textContent}`);
+        }
+      });
+      
+    </script>
+  </body>
+</html>

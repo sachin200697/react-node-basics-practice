@@ -28,8 +28,16 @@ import Menu from "./tabindex/Menu";
 import HighChart from "./charts/HighChart";
 import Iframe from "./iframe/Iframe";
 import IframeResult from "./iframe/IframeResult";
+import OTPLogin from "./otp/OTPLogin";
+import FileExplorar from "./fileExplorer/FileExplorar";
+import Pagenation from "./pagination/Pagenation";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PasswordGenerator from "./passwordGenerator/PasswordGenerator";
+import ProgressBar from "./progressBar/ProgressBar";
+import PolyfilUserMemmo from "./polyfilForUseMemo/PolyfilUserMemmo";
+import GridLight from "./gridLights/GridLight";
+import PloyfilUseEffect from "./polyfilForUseEffect/PloyfilUseEffect";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -94,9 +102,9 @@ function App() {
         <UseCallback />
       </div> */}
 
-      <div>
+      {/* <div>
         <CustomHookForLocalStorage />
-      </div>
+      </div> */}
 
       {/* <div>
         <UseLayoutEffect />
@@ -129,6 +137,15 @@ function App() {
             <Route path="iframeResult" element={<IframeResult />} />          
         </Routes>
       </Router> */}
+
+      {/* <OTPLogin /> */}
+      {/* <FileExplorar /> */}
+      {/* <Pagenation /> */}
+      {/* <PasswordGenerator /> */}
+      {/* <ProgressBar /> */}
+      {/* <PolyfilUserMemmo /> */}
+      {/* <GridLight /> */}
+      <PloyfilUseEffect />
     </Provider>
   );
 }
