@@ -22,7 +22,6 @@ const f1 = () => {console.log(arguments);}
 
 
 //create a function that will run only once
-
 function callOnce(fun, context) { //context is an object 
     let run;
     return function (){

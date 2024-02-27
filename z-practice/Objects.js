@@ -134,7 +134,7 @@ function Question8(){
         obj2.age = 20;
         console.log(obj1); 
     }
-    
+    // shallowCopy();
     //-----------------------
     function deepCopy1() {        
         let obj1 = {
@@ -152,7 +152,7 @@ function Question8(){
         console.log(obj1);  //{ name: { firstName: 'Pradeep', lastName: 'Kumar' }, age: 10 }
         console.log(obj2);  //{ name: { firstName: 'Pradeep', lastName: 'Kumar' }, age: 20 }
     }
-
+    deepCopy1();
     function deepCopy2() {        
         let obj1 = {
             name: {
@@ -198,7 +198,7 @@ function Question8(){
     }
 
     // we can also use lodash => _.cloneDeep(obj) 
-    deepCopy3();
+    // deepCopy3();
 }
 
 Question8();

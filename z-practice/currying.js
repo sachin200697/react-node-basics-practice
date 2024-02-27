@@ -46,7 +46,7 @@ function Question2() {
 
 //currying vs partial application
 function Question3() {
-    // currying -> not of return function depends upon the no. of arguments passed
+    // currying -> no of return function depends upon the no. of arguments passed
     //ex:
     function fun(a){
         return (b) => {

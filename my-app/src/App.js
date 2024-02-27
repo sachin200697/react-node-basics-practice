@@ -38,6 +38,11 @@ import ProgressBar from "./progressBar/ProgressBar";
 import PolyfilUserMemmo from "./polyfilForUseMemo/PolyfilUserMemmo";
 import GridLight from "./gridLights/GridLight";
 import PloyfilUseEffect from "./polyfilForUseEffect/PloyfilUseEffect";
+import DarkTheme from "./darkTheme/DarkTheme";
+import BreadCrumbExmaple from "./breadcrumbs/BreadCrumbExmaple";
+import MultiSelect from "./mutliSelect/MultiSelect";
+import Strepper from "./strepper/Strepper";
+import LazyLoading from "./lazyLoading/LazyLoading";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -145,7 +150,12 @@ function App() {
       {/* <ProgressBar /> */}
       {/* <PolyfilUserMemmo /> */}
       {/* <GridLight /> */}
-      <PloyfilUseEffect />
+      {/* <PloyfilUseEffect /> */}
+      {/* <DarkTheme /> */}
+      {/* <BreadCrumbExmaple /> */}
+      {/* <MultiSelect /> */}
+      {/* <Strepper /> */}
+      <LazyLoading />
     </Provider>
   );
 }

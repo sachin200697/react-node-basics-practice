@@ -1,0 +1,91 @@
+body{
+    font-family: 'Times New Roman', Times, serif;    
+}
+
+.multi-select-container {    
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 40px;
+    padding: 5px 10px 5px 10px;  
+    border: 2px solid black;  
+}
+
+
+.multi-select{
+    position: relative;    
+}
+
+.multi-select-container__input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.multi-select-container__suggestion{
+    position: absolute;
+    left: 10px;top: 45px;
+    list-style: none;    
+    z-index: 6;
+    max-height: 30vh;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 0, 0, 0.221);
+}
+
+.multi-select-container__suggesteduser{
+    box-sizing: border-box;
+    display: grid;        
+    grid-template-columns: 20% 75%;
+    gap: 5%;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.176);
+    
+}
+
+.multi-select-container__suggesteduser:hover{
+    background-color: rgba(0, 0, 0, 0.041);
+    cursor: pointer;
+}
+
+.multi-select-container__suggesteduser:last-child{
+    border-bottom: none;
+}
+
+.multi-select-container__suggesteduser img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;       
+}
+
+
+/* ......................... */
+.pill-container{
+    display: grid;
+    padding: 5px;
+    border-radius: 15px;
+    grid-template-columns: 10% 70% 10%;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    gap: 5px;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pill-container:hover{
+    background-color: rgba(0, 0, 0, 0.29);
+}
+
+.pill-container__img{
+    width: 100%;
+    height: 100%;
+}
+
+.pill-container__name{
+
+}
