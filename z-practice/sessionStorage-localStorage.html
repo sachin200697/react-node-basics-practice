@@ -1,0 +1,75 @@
+<!-- 
+    Both session and local storage related to domain means for other site they will not
+    be available.
+
+    sessionStorage: 
+        1. if refresh tab data will remain, but if change url on the same tab then
+           data will not be available.
+        2. if close browser then data will be lost.
+    
+    localStorage:
+        1. if refresh tab data will remain, but if change url on the same tab then
+           data will not be available.
+        2. if close browser then data will remain.
+
+ -->
+ 
+ <!-- 
+    html:5 features :
+    new tags:
+    header, nav, section, atrical aside, footer, audio, video, canvas
+
+    new form attributes:
+    url, calendar, Date, email,
+ -->
+
+ <!-- 
+    data attributes: to represent customer data like data-toggle, data-thrme..
+    meta data: Name, author, Keywords  -> to optimize search engine result
+    canvas: tag to easily drow diagrams, graphs, photo and create animations
+  -->
+
+
+<!-- 
+    Position:
+    static: normal 
+    relative: same as normal but can change top, bottom, left, right. Element is pulled from document flow.
+    absolute: same as relative but it refers to parent and element is treated as it does not exists
+    fixed: reference to screen not any parent
+    sticky: relative + fixed 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <progress value="50" max="100"></progress>
+    <meter value="50" max="100" min="0"></meter>
+    <br>
+    <span title="this is a tool tip">Hover over me</span>
+    <br>
+
+    <!-- image tag for responsive design -->
+    <picture>
+        <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+        <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+        <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+      </picture>
+
+      <dl>
+        <dt>Term 1</dt>
+        <dd>Definition 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition 2</dd>
+        <dt>Term 3</dt>
+        <dd>Definition 3</dd>
+      </dl>
+
+      <!-- send mail -->
+      <a href="mailto:sachin200697@gmail.com">Send Mail</a>
+</body>
+</html>
+

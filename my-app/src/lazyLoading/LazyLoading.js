@@ -5,6 +5,7 @@ import Loading from "./components/Loading";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import DataLazyLoading from "./components/DataLazyLoading";
+import ImageLazyLoading from "./components/ImageLazyLoading";
 
 const LazyUser = lazy(() => import("./components/User"));
 
@@ -27,6 +28,7 @@ function LazyLoading() {
         </Suspense>
       </ErrorBoundary>
       <DataLazyLoading />
+      <ImageLazyLoading />
     </div>
   );
 }

@@ -83,3 +83,21 @@ console.log(obj);
 
 LRU('person', 'p');
 console.log(obj);
+
+
+//escape and unescape
+
+let s = "Hello, how are you? is't cold today";
+s = escape(s);
+console.log(s);
+s = unescape(s);
+console.log(s);
+
+function f() {
+    var i = 100;
+    setTimeout(()=>{
+        console.log(i);
+    }, 1000);    
+}
+
+f();

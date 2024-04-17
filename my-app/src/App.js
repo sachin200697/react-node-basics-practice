@@ -43,6 +43,7 @@ import BreadCrumbExmaple from "./breadcrumbs/BreadCrumbExmaple";
 import MultiSelect from "./mutliSelect/MultiSelect";
 import Strepper from "./strepper/Strepper";
 import LazyLoading from "./lazyLoading/LazyLoading";
+import Practice from "./practice/Practice";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -156,6 +157,7 @@ function App() {
       {/* <MultiSelect /> */}
       {/* <Strepper /> */}
       <LazyLoading />
+      {/* <Practice /> */}
     </Provider>
   );
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cssom.css">
+    <style>
+        .parent{
+            max-width: 500px;
+            background-color: aqua;
+        }
+
+        .heading{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1 class="heading">
+            Hello
+        </h1>
+    </div>
+
+    <!-- we can access cssom from same html file's script tag or in the separate .js file -->
+    <!-- but we can only access cssom for internal css, we can not access it for extenral file css -->
+    <!-- <script>
+        let styleDOM = document.styleSheets[1];
+
+        console.log(styleDOM);
+
+        let rules = styleDOM.cssRules;
+
+        for(let rule of rules){
+            if(rule.selectorText === '.heading'){
+                rule.style.color = 'pink';
+            }
+        }
+    </script> -->
+    <script src="./cssom.js"></script>
+</body>
+</html>

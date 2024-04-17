@@ -51,3 +51,14 @@ myFun1('pradeep', 'meerpur');
 
 myFun2('Naman', 'BSR'); //Naman undefined BSR
 myFun2('pradeep', 'meerpur');
+
+
+/// where to use arrow function and where to use normal functions
+//arrow function will make more sence to use in methods like map, reduce, filter where
+//there is no use of this keyword
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function (){
+    this.style.color = 'black';     //here if we use arrow function then it 
+    // will give error that can not set property of undefined
+})
