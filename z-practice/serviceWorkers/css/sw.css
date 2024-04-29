@@ -1,0 +1,10 @@
+body{
+    background-color: antiquewhite;
+}
+output{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 300px;
+}
